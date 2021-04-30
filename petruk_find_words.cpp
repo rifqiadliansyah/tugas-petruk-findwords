@@ -27,7 +27,7 @@ bool searchHorizontal(char *word){
         bool buktikan;
         char *counter;
         for(int i=0;i<rows;i++){
-            counter= *(words+i);
+            counter= *(words+i);     //Masih Ada Bug
                              
             if(strstr(counter, word))
                {
