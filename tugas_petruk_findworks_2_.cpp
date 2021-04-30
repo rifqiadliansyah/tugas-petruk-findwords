@@ -28,7 +28,7 @@ bool searchHorizontal(char *word){
         char *counter;
         for(int i=0;i<rows;i++){
             counter= *(words+i);
-            cout<<counter;                      //jika input pertama "Finne" maka akan selalu muncul "ada"
+            cout<<counter;                      //masih terdapat bug
             if(strstr(counter, word))
                {
                  buktikan = true;
