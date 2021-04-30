@@ -23,7 +23,24 @@ const int cols = 16, rows = 15;
 char *getWordVertical(int);
 char *reverse(char *);
 bool searchVertical(char *);
-bool searchHorizontal(char *);
+bool searchHorizontal(char *word){
+        bool buktikan;
+        char *counter;
+        for(int i = 0; i < rows ; i++){
+            counter= *(words+i);                 //jika input pertama "Finne" maka akan selalu muncul "ada"
+            if(*p strstr(counter, word))
+               {
+                 buktikan = true;
+                 break;
+               }
+            else
+               {
+                buktikan = false;
+               }    
+	    
+    }
+        return buktikan;      
+    }
 
 
 int main()
