@@ -20,15 +20,16 @@ const int cols = 16, rows = 15;
                                 "pdcrzmsngrdnrpz",
                                 "ohnkzwaterjgtra"};
 
-char *getWordVertical(int);
-char *reverse(char *);
-bool searchVertical(char *);
+// char *getWordVertical(int)
+// char *reverse(char *);
+// bool searchVertical(char *);
 bool searchHorizontal(char *word){
         bool buktikan;
         char *counter;
-        for(int i = 0; i < rows ; i++){
-            counter= *(words+i);                 //jika input pertama "Finne" maka akan selalu muncul "ada"
-            if(*p strstr(counter, word))
+        for(int i=0;i<rows;i++){
+            counter= *(words+i);     //Masih Ada Bug
+                             
+            if(strstr(counter, word))
                {
                  buktikan = true;
                  break;
@@ -36,24 +37,27 @@ bool searchHorizontal(char *word){
             else
                {
                 buktikan = false;
-               }    
-	    
+               }        
     }
         return buktikan;      
     }
 
 
 int main()
-{
+{    
     char word[16];
     int n;
     cin>>n;
+    cin.ignore(n);
     for (int i=0;i<n;i++){
         cin.getline(word,16,'\n');
-        if (searchVertical(word) || searchHorizontal(word))
+        if (/*searchVertical(word) ||*/ searchHorizontal(word)==true)
             cout << "Ada\n";
         else 
             cout << "Tidak Ada\n";
+            
     }
     return 0;
+    
+    
 }
